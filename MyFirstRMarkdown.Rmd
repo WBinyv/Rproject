@@ -1,0 +1,72 @@
+---
+title: "Assignment1MD"
+author: "Bryce"
+date: "2023-09-27"
+output: html_document
+---
+## 1
+```{r}
+animals <- c("Snake", "Ostrich", "Cat", "Spider")
+num_legs <- c(0, 2, 4, 8)
+animals_df <- data.frame(animals, num_legs)
+```
+## 2
+```{r}
+x_vect <- seq(from = 12, to = 2, by = -2)
+X <- matrix(x_vect, 2, 3)
+Y <- matrix(c(1:4), 2, 2)
+Z <- matrix(seq(4, 10, 2), 2, 2)
+```
+## 3
+```{r}
+YT <- t(Y)
+ZT <- t(Z)
+
+```
+## 4
+```{r}
+sumofYZ <- Y+Z
+mulofYZ <- Y %*% Z
+mulofZY <- Z %*% Y
+mulofYX <- Y %*% X
+```
+## 5
+```{r}
+Y_ <- solve(Y)
+Y_Y <- solve(Y, Y)
+Y_X <- solve(Y) %*% X
+Y_X <- solve(Y, X)
+```
+## 6
+```{r}
+MyFirstFunc <- function(n) {
+  i <- 2
+  sum <- 0
+  while(i < n) {
+    if(i %% 7 == 0|| i %% 2 == 0) {
+      sum <- sum + i
+    }
+    i <- i + 1
+  }
+  return (sum)
+}
+print(MyFirstFunc(1000))
+```
+## 7 Wave plot
+```{r}
+x <- seq(0, 20, 0.01)
+y <- sin(x)
+#for(i in x) {
+#  t <- t + 1
+#  y <- sin(i)
+#}
+#print(x)
+#print(y)
+sin_df <- data.frame(x, y)
+plot(x, y)
+```
+\[\sin(x)=\sum_{n=1}^{\infty}(-1)^{n+1}\cdot \frac{x^{2n-1}}{(2n-1)!}
+\approx x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}\ldots. \]
+
+\[\sin^2(x)+\cos^2(x)=1\]
+
