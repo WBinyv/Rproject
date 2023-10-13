@@ -1,1 +1,11 @@
-## 2
+# 2
+## 1. Data Wrangling
+### 1.1 
+```{r}
+#  hSF <- Hawks %>% select(Wing, Weight, Tail) %>% filter (species == "Red-Tailed Hawk", Weight >= 1)
+
+hSF <- Hawks %>%
+  filter(Species == "RT", Weight >= 1000) %>%  # Select the specified columns
+  select(Wing, Weight, Tail)  # Filter based on species and weight
+
+```
